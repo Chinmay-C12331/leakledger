@@ -1,0 +1,206 @@
+[
+  {
+    "id": "dev-school",
+    "split": "dev",
+    "label": "same",
+    "incoming": {
+      "description": "नीले स्कूल गेट की दाईं चौखट पर पाइप के जोड़ से पानी निकल रहा है।",
+      "landmark": "Blue school gate",
+      "language": "hi",
+      "photo_url": null
+    },
+    "candidate": {
+      "description": "The pipe joint right against the blue school gate's right post leaks.",
+      "landmark": "Blue school gate",
+      "language": "en",
+      "photo_url": null
+    }
+  },
+  {
+    "id": "dev-corner",
+    "split": "dev",
+    "label": "different",
+    "incoming": {
+      "description": "चाय की दुकान के पीछे वाल्व से पानी बह रहा है।",
+      "landmark": "Tea stall",
+      "language": "hi",
+      "photo_url": null
+    },
+    "candidate": {
+      "description": "Water leaks from a pipe joint by the school entrance across the street.",
+      "landmark": "School entrance",
+      "language": "en",
+      "photo_url": null
+    }
+  },
+  {
+    "id": "dev-puddle",
+    "split": "dev",
+    "label": "insufficient",
+    "incoming": {
+      "description": "यहाँ पानी भरा है।",
+      "landmark": "Main Road",
+      "language": "hi",
+      "photo_url": null
+    },
+    "candidate": {
+      "description": "There is water somewhere on this road.",
+      "landmark": "Main Road",
+      "language": "en",
+      "photo_url": null
+    }
+  },
+  {
+    "id": "dev-stand",
+    "split": "dev",
+    "label": "same",
+    "incoming": {
+      "description": "बस शेल्टर के नीचे लाल हाइड्रेंट की टोपी टपक रही है।",
+      "landmark": "Bus shelter",
+      "language": "hi",
+      "photo_url": null
+    },
+    "candidate": {
+      "description": "Red hydrant cap dripping beneath the bus shelter roof.",
+      "landmark": "Bus shelter",
+      "language": "en",
+      "photo_url": null
+    }
+  },
+  {
+    "id": "held-library",
+    "split": "heldout",
+    "label": "same",
+    "incoming": {
+      "description": "पुस्तकालय की पिछली सीढ़ी से सटे पीले वाल्व के पहिए से पानी टपक रहा है।",
+      "landmark": "Library rear steps",
+      "language": "hi",
+      "photo_url": null
+    },
+    "candidate": {
+      "description": "The yellow valve wheel touching the library's back step has water dripping off it.",
+      "landmark": "Library rear steps",
+      "language": "en",
+      "photo_url": null
+    }
+  },
+  {
+    "id": "held-market",
+    "split": "heldout",
+    "label": "same",
+    "incoming": {
+      "description": "बाजार के बैंगनी शटर के नीचे सफेद पाइप के जोड़ से पानी आ रहा है।",
+      "landmark": "Market shutter",
+      "language": "hi",
+      "photo_url": null
+    },
+    "candidate": {
+      "description": "White pipe joint leaks directly below the market's purple shutter.",
+      "landmark": "Market shutter",
+      "language": "en",
+      "photo_url": null
+    }
+  },
+  {
+    "id": "held-ramp",
+    "split": "heldout",
+    "label": "same",
+    "incoming": {
+      "description": "रैंप की तीसरी रेलिंग पर बंधा नारंगी नल टूटा है और पानी बह रहा है।",
+      "landmark": "Clinic ramp",
+      "language": "hi",
+      "photo_url": null
+    },
+    "candidate": {
+      "description": "Water flows from the broken orange tap tied to the third railing on the clinic ramp.",
+      "landmark": "Clinic ramp",
+      "language": "en",
+      "photo_url": null
+    }
+  },
+  {
+    "id": "held-opposite",
+    "split": "heldout",
+    "label": "different",
+    "incoming": {
+      "description": "पुल के उत्तर वाले सिरे पर हाइड्रेंट से रिसाव है।",
+      "landmark": "North bridge end",
+      "language": "hi",
+      "photo_url": null
+    },
+    "candidate": {
+      "description": "At the south end of this short bridge, a valve beside the steps is leaking.",
+      "landmark": "South bridge end",
+      "language": "en",
+      "photo_url": null
+    }
+  },
+  {
+    "id": "held-lane",
+    "split": "heldout",
+    "label": "different",
+    "incoming": {
+      "description": "दूध की दुकान के पीछे खुले पाइप के जोड़ से पानी निकल रहा है।",
+      "landmark": "Milk booth",
+      "language": "hi",
+      "photo_url": null
+    },
+    "candidate": {
+      "description": "Across this lane, a green valve next to the bank steps is dripping.",
+      "landmark": "Bank steps",
+      "language": "en",
+      "photo_url": null
+    }
+  },
+  {
+    "id": "held-road",
+    "split": "heldout",
+    "label": "different",
+    "incoming": {
+      "description": "चौराहे की पूर्वी जेब्रा क्रॉसिंग में गहरा गड्ढा है।",
+      "landmark": "East crossing",
+      "language": "hi",
+      "photo_url": null
+    },
+    "candidate": {
+      "description": "A broken water pipe behind the corner shop is leaking, the crossing itself is dry.",
+      "landmark": "Corner shop",
+      "language": "en",
+      "photo_url": null
+    }
+  },
+  {
+    "id": "held-vague",
+    "split": "heldout",
+    "label": "insufficient",
+    "incoming": {
+      "description": "गली में पानी दिख रहा है।",
+      "landmark": "Second Cross",
+      "language": "hi",
+      "photo_url": null
+    },
+    "candidate": {
+      "description": "Water on Second Cross; I couldn't see the source.",
+      "landmark": "Second Cross",
+      "language": "en",
+      "photo_url": null
+    }
+  },
+  {
+    "id": "held-gate",
+    "split": "heldout",
+    "label": "insufficient",
+    "incoming": {
+      "description": "पार्क के पास जमीन गीली है।",
+      "landmark": "Park",
+      "language": "hi",
+      "photo_url": null
+    },
+    "candidate": {
+      "description": "Pipe joint is leaking on the north fence; the whole park perimeter is wet.",
+      "landmark": "Park",
+      "language": "en",
+      "photo_url": null
+    }
+  }
+]

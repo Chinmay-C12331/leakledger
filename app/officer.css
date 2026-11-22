@@ -1,0 +1,240 @@
+.desk-entry {
+  max-width: 1250px;
+  margin: auto;
+  padding: 0 5vw 40px;
+}
+.portal-bar {
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+}
+.portal-bar .brand {
+  padding: 0;
+}
+.portal-bar > span,
+.portal-map > span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.9rem;
+}
+.portal-bar > span {
+  color: var(--muted);
+}
+.portal-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(280px, 1fr);
+  gap: 24px;
+  align-items: start;
+  margin: clamp(32px, 7vw, 90px) 0;
+}
+.portal-welcome,
+.signin-card {
+  border-radius: 16px;
+  overflow: hidden;
+}
+.portal-welcome {
+  background: #102e2c;
+  color: #ecfff5;
+}
+.portal-map {
+  background:
+    linear-gradient(0deg, #102e2c, transparent 26%),
+    url("/ward-map.svg") center/cover;
+  height: 190px;
+  display: flex;
+  align-items: flex-start;
+  padding: 22px;
+}
+.portal-map > span {
+  border: 1px solid #647f76;
+  padding: 6px 11px;
+  background: #102e2ce6;
+  border-radius: 6px;
+}
+.portal-copy {
+  padding: 10px clamp(24px, 3vw, 40px) 36px;
+}
+.portal-copy h1 {
+  font-size: clamp(32px, 4.2vw, 58px);
+}
+.portal-copy p {
+  margin: 14px 0 25px;
+  line-height: 1.58;
+  color: #c2d6ce;
+  max-width: 38ch;
+}
+.portal-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+.portal-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  color: #c1f6d7;
+  font-size: 0.94rem;
+  text-decoration: none;
+}
+.portal-links .primary {
+  background: #b2edca;
+  border-color: #b2edca;
+  color: #11362b;
+}
+.portal-links a:hover {
+  text-decoration: underline;
+}
+.signin-card {
+  padding: clamp(22px, 3vw, 36px);
+}
+.signin-card h2 {
+  margin: 15px 0 7px;
+  font-size: 1.65rem;
+}
+.signin-card > p,
+.signin-card small {
+  color: var(--muted);
+  line-height: 1.5;
+}
+.signin-card form {
+  display: grid;
+  gap: 10px;
+  margin-top: 26px;
+}
+.signin-card form label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.signin-card input {
+  border: 1px solid #bdcdc5;
+  border-radius: 7px;
+  padding: 11px;
+  width: 100%;
+}
+.signin-card button {
+  margin-top: 7px;
+  justify-content: center;
+}
+.api-error {
+  background: #fff1e6;
+  color: #8b440f;
+  border-radius: 6px;
+  padding: 9px;
+  font-size: 0.9rem;
+}
+.rail nav a {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: #cfddd8;
+  padding: 13px 14px;
+  text-decoration: none;
+  font-size: 0.94rem;
+  border-radius: 7px;
+}
+.rail nav a:hover {
+  background: #1b413b;
+}
+.signout,
+.desk-refresh {
+  display: grid;
+  place-items: center;
+  background: none;
+  border: 0;
+  border-radius: 7px;
+  padding: 6px;
+}
+.signout {
+  margin-left: auto;
+  color: #b8d1c8;
+}
+.signout:hover {
+  color: white;
+}
+.desk-refresh {
+  margin-left: auto;
+  color: #41594e;
+  border: 1px solid #dae4dd;
+}
+.desk-triage,
+.desk-route {
+  font-size: 0.78rem;
+}
+.desk-triage {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.desk-severity {
+  font-weight: 600;
+  color: #415d55;
+  padding: 3px 6px;
+  background: #eff3ef;
+  border-radius: 4px;
+  text-transform: capitalize;
+}
+.desk-severity.medium {
+  background: #fff1d5;
+  color: #80520a;
+}
+.desk-severity.high {
+  background: #ffe8de;
+  color: #8f361b;
+}
+.desk-route {
+  color: #596b64;
+  margin-top: 5px;
+}
+.desk-entry button:disabled,
+.ld-dialog button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+@media (max-width: 740px) {
+  .portal-body {
+    grid-template-columns: 1fr;
+    margin-top: 24px;
+  }
+  .portal-map {
+    height: 120px;
+  }
+  .portal-bar {
+    height: 70px;
+  }
+  .portal-bar > span {
+    font-size: 0.76rem;
+  }
+  .portal-links {
+    gap: 12px;
+  }
+  .portal-copy {
+    padding-bottom: 24px;
+  }
+  .signin-card {
+    padding: 20px;
+  }
+  .signin-card h2 {
+    margin-top: 9px;
+  }
+  .portal-bar .brand {
+    font-size: 1.4rem;
+  }
+}
+.mobile-triage {
+  display: none;
+}
+@media (max-width: 650px) {
+  .mobile-triage {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-top: 6px;
+    line-height: 1.5;
+  }
+}

@@ -1,0 +1,224 @@
+.ward-map {
+  --map-pending: #ffc261;
+  --map-linked: #73dbc5;
+  --map-repaired: #b4c1ca;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  width: 100%;
+  height: 210px;
+  border: 1px solid #283d48;
+  border-radius: 13px;
+  background: #18252c;
+  color: #f4f8f9;
+}
+.ward-map--expanded {
+  height: clamp(310px, 43vh, 440px);
+}
+.ward-map__surface {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+}
+.ward-map__streets {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.ward-map::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      22deg,
+      rgba(9, 22, 29, 0.98),
+      rgba(9, 22, 29, 0.68) 19%,
+      transparent 50%
+    ),
+    linear-gradient(0deg, rgba(6, 16, 23, 0.38), transparent 27%);
+}
+.ward-map__chip,
+.ward-map__expand,
+.ward-map__legend {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  background: #11212beb;
+  border: 1px solid #46606b;
+  color: #e0eaed;
+}
+.ward-map__chip {
+  top: 17px;
+  left: 20px;
+  gap: 7px;
+  border-radius: 5px;
+  padding: 5px 8px;
+  font:
+    600 0.75rem/1.2 ui-monospace,
+    monospace;
+  letter-spacing: 0.09em;
+}
+.ward-map__chip svg {
+  color: #99daca;
+}
+.ward-map__expand {
+  top: 15px;
+  right: 16px;
+  gap: 7px;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font: inherit;
+  font-size: 0.8125rem;
+  cursor: pointer;
+}
+.ward-map__expand:hover {
+  background: #2c414b;
+}
+.ward-map__caption {
+  position: absolute;
+  z-index: 1;
+  bottom: 21px;
+  left: 23px;
+  pointer-events: none;
+}
+.ward-map__caption h2 {
+  font: inherit;
+  font-size: clamp(1.45rem, 2.1vw, 1.85rem);
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+  font-weight: 650;
+  margin: 0 0 6px;
+  color: #f4f8f9;
+}
+.ward-map__caption p {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  color: #c4d0d3;
+  margin: 0;
+  font-size: 0.875rem;
+}
+.ward-map__marker {
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+  border: 0;
+  background: none;
+  padding: 0;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.ward-map__marker--pending {
+  --marker: var(--map-pending);
+}
+.ward-map__marker--linked {
+  --marker: var(--map-linked);
+}
+.ward-map__marker--repaired {
+  --marker: var(--map-repaired);
+}
+.ward-map__dot {
+  display: grid;
+  place-items: center;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  color: #122b2b;
+  background: var(--marker);
+  border: 1px solid var(--marker);
+  box-shadow:
+    0 0 0 4px color-mix(in srgb, var(--marker) 23%, transparent),
+    0 0 0 8px color-mix(in srgb, var(--marker) 10%, transparent);
+}
+.ward-map__marker:hover .ward-map__dot {
+  outline: 2px solid white;
+}
+.ward-map__marker--selected {
+  z-index: 2;
+}
+.ward-map__marker-label {
+  position: absolute;
+  left: calc(100% + 2px);
+  padding: 4px 7px;
+  border-radius: 4px;
+  font:
+    600 0.75rem/1 ui-monospace,
+    monospace;
+  letter-spacing: 0.035em;
+  white-space: nowrap;
+  background: #15242af2;
+  border: 1px solid color-mix(in srgb, var(--marker) 55%, transparent);
+  color: var(--marker);
+}
+.ward-map__legend {
+  right: 16px;
+  bottom: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-color: #384c57;
+  padding: 5px 9px;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  line-height: 1.35;
+}
+.ward-map__legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.ward-map__legend i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+.ward-map__key-pending {
+  background: var(--map-pending);
+}
+.ward-map__key-linked {
+  background: var(--map-linked);
+}
+.ward-map__key-repaired {
+  background: var(--map-repaired);
+}
+.ward-map button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+@media (max-width: 650px) {
+  .ward-map__surface {
+    width: max(100%, 560px);
+    left: 46%;
+    transform: translateX(-50%);
+  }
+  .ward-map__caption {
+    left: 15px;
+    bottom: 15px;
+  }
+  .ward-map__chip {
+    top: 12px;
+    left: 13px;
+  }
+  .ward-map__expand {
+    top: 12px;
+    right: 12px;
+  }
+  .ward-map__legend {
+    right: 11px;
+    bottom: 12px;
+    gap: 5px;
+    flex-direction: column;
+    align-items: start;
+  }
+  .ward-map__marker--selected:last-child .ward-map__marker-label {
+    left: auto;
+    right: calc(100% + 2px);
+  }
+}

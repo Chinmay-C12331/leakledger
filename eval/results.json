@@ -1,0 +1,66 @@
+{
+  "dataset": "12 staged text-only pairs",
+  "split": "heldout",
+  "n": 8,
+  "generated_at": "2026-11-21T15:44:54.411Z",
+  "model": "gpt-4o-mini",
+  "live": {
+    "status": "blocked",
+    "reason": "OPENAI_API_KEY is missing.",
+    "counts": null,
+    "rows": []
+  },
+  "offline_mock": {
+    "status": "complete",
+    "counts": {
+      "attempted": 8,
+      "completed": 8,
+      "true_duplicates_suggested": 2,
+      "separate_leaks_wrongly_suggested": 0,
+      "uncertain": 3,
+      "errors": 0
+    },
+    "rows": [
+      {
+        "id": "held-library",
+        "label": "same",
+        "verdict": "likely_same"
+      },
+      {
+        "id": "held-market",
+        "label": "same",
+        "verdict": "likely_same"
+      },
+      {
+        "id": "held-ramp",
+        "label": "same",
+        "verdict": "uncertain"
+      },
+      {
+        "id": "held-opposite",
+        "label": "different",
+        "verdict": "likely_different"
+      },
+      {
+        "id": "held-lane",
+        "label": "different",
+        "verdict": "likely_different"
+      },
+      {
+        "id": "held-road",
+        "label": "different",
+        "verdict": "likely_different"
+      },
+      {
+        "id": "held-vague",
+        "label": "insufficient",
+        "verdict": "uncertain"
+      },
+      {
+        "id": "held-gate",
+        "label": "insufficient",
+        "verdict": "uncertain"
+      }
+    ]
+  }
+}

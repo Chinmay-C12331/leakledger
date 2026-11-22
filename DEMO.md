@@ -1,0 +1,14 @@
+# Two-minute LeakLedger walkthrough
+
+Use a freshly seeded ward, an officer tab at `/`, a second browser at `/report`, and `demo/resident-school-gate.jpg` on the submission device. For a physical phone, use the same deployed HTTPS origin as the officer. For a local presentation, use a mobile-sized second browser window. Prepare `npm run eval` before presenting. The report ID on a fresh seed is LL-1044. On a reused database, follow the ID on the receipt.
+
+| Time | Action and narration |
+| --- | --- |
+| 0:00–0:15 | Sign in and open **Review queue**. “Two residents can describe one leaking pipe. Counting every report as a separate repair sends the crew twice.” Point out the school-gate and tea-stall incidents on the same street. |
+| 0:15–0:40 | In the resident browser choose Hindi. Enter **स्कूल के नीले गेट के पास पाइप के जोड़ से पानी निकल रहा है।** Choose **Blue school gate** under **Demo landmark**, attach `demo/resident-school-gate.jpg`, and select **Submit report**. Open **Track this report** and leave the tab on **Awaiting review**. |
+| 0:40–1:05 | In the officer queue select **Refresh reports**. Open the new report. Compare its original Hindi text and photo with the English school-gate report and photo. Show the actual verdict, English summary, **Agreement**, **Conflict**, severity and simulated department. Describe an evidence item and its source tag. Compare the tea-stall candidate to show why the same street can contain two leaks. |
+| 1:05–1:25 | Return to the school-gate candidate and select **Confirm link**. Set **Repair status** to **Repaired**. Enter **The school-gate pipe joint has been replaced.** Select **Save repair update**. |
+| 1:25–1:45 | Reload the resident’s private tracking page. Open **Track LL-1042** in another tab. Both pages show **Repaired** and the same note. In **Overview**, LL-1041 remains **Assigned** to its open tea-stall repair. Open `/dashboard` to show the repaired pin and public fix. |
+| 1:45–2:00 | Show `eval/results.json`. Read the counts from the applicable results section. Identify the model and how many pairs completed. For the checked-in mock run, eight heldout pairs produced two true duplicate suggestions, zero incorrect link suggestions for distinct leaks, and three uncertain verdicts. The live run was blocked without a key. |
+
+The fresh report uses the active model mode shown in the officer workspace. In offline mode, say “This comparison uses a deterministic bilingual text model. The officer can inspect both photos.” In live mode, discuss only the evidence the provider returned. If analysis is still running, refresh the queue when it completes. If the model is unavailable, show the manual-review state, compare the original photos and text, and choose the incident manually. The resident’s saved report and tracking link still work.
